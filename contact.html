@@ -147,8 +147,36 @@
                 <input id="email" name="email" type="email" required autocomplete="email" />
               </div>
               <div class="form-group">
+                <label for="suburb">Suburb / town</label>
+                <input id="suburb" name="suburb" type="text" required autocomplete="address-level2" />
+              </div>
+              <div class="form-group">
+                <label for="site-type">Site type</label>
+                <select id="site-type" name="site_type" required>
+                  <option value="">Select site type</option>
+                  <option value="Residential">Residential</option>
+                  <option value="Commercial">Commercial</option>
+                  <option value="Sports facility">Sports facility</option>
+                  <option value="Rural / acreage">Rural / acreage</option>
+                  <option value="Government / public sector">Government / public sector</option>
+                </select>
+              </div>
+              <fieldset class="form-group fence-options">
+                <legend>Fence type required (select at least one)</legend>
+                <label><input type="checkbox" name="fence_types[]" value="Chainlink / chainwire" /> Chainlink / chainwire</label>
+                <label><input type="checkbox" name="fence_types[]" value="Colorbond" /> Colorbond</label>
+                <label><input type="checkbox" name="fence_types[]" value="Timber" /> Timber</label>
+                <label><input type="checkbox" name="fence_types[]" value="Aluminium" /> Aluminium</label>
+                <label><input type="checkbox" name="fence_types[]" value="Security / anti-climb" /> Security / anti-climb</label>
+                <label><input type="checkbox" name="fence_types[]" value="Not sure yet" /> Not sure yet</label>
+              </fieldset>
+              <div class="form-group">
+                <label for="metres">Approximate length (metres)</label>
+                <input id="metres" name="approx_metres" type="number" required inputmode="numeric" min="1" step="1" />
+              </div>
+              <div class="form-group">
                 <label for="message">Message</label>
-                <textarea id="message" name="message" required placeholder="Suburb, site type (sport / rural / government / residential), fence type (e.g. chainlink), approximate metres, access notes…"></textarea>
+                <textarea id="message" name="message" required placeholder="Tell us about your project (fence height, gates, timeline, site access, and any other requirements)."></textarea>
               </div>
               <button class="btn btn-primary btn-block" type="submit">Send message</button>
               <p class="form-hint">
@@ -269,6 +297,26 @@
             next.value = new URL("contact.html?sent=1", location.href).href;
           } catch (e) {}
         }
+      })();
+      (function () {
+        var form = document.querySelector(".quote-form");
+        if (!form) return;
+        var fenceBoxes = form.querySelectorAll('input[name="fence_types[]"]');
+        if (!fenceBoxes.length) return;
+
+        function syncFenceTypeValidity() {
+          var anyChecked = Array.prototype.some.call(fenceBoxes, function (box) {
+            return box.checked;
+          });
+          var message = anyChecked ? "" : "Please select at least one fence type.";
+          fenceBoxes[0].setCustomValidity(message);
+        }
+
+        Array.prototype.forEach.call(fenceBoxes, function (box) {
+          box.addEventListener("change", syncFenceTypeValidity);
+        });
+        form.addEventListener("submit", syncFenceTypeValidity);
+        syncFenceTypeValidity();
       })();
       if (new URLSearchParams(location.search).get("sent") === "1") {
         var card = document.querySelector(".contact-card .quote-form");
