@@ -1,3 +1,4 @@
+<!-- SITE_URL: https://johnstone-fencing.vercel.app -->
 <!DOCTYPE html>
 <html lang="en-AU">
   <head>
@@ -6,9 +7,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
+      as="style"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     <title>Fencing Services Sydney | Chainlink, Diplomat &amp; Security Fencing</title>
     <meta
       name="description"
@@ -32,6 +39,12 @@
       property="og:image"
       content="https://johnstone-fencing.vercel.app/images/fenching-hero-1920x600.jpg"
     />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="600" />
+    <meta
+      property="og:image:alt"
+      content="Commercial chainwire fencing installed by Johnstone Fencing in Sydney"
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Chainlink, Diplomat &amp; Security Fencing | Johnstone Fencing" />
     <meta
@@ -44,6 +57,7 @@
       {
         "@context": "https://schema.org",
         "@type": "HomeAndConstructionBusiness",
+        "@id": "https://johnstone-fencing.vercel.app/#business",
         "name": "Johnstone Fencing",
         "legalName": "JOHNSTONE CIVIL PTY LTD",
         "description": "Chainlink, diplomat, and security fencing in Sydney for residential, commercial, industrial, and public-sector sites.",
@@ -51,6 +65,7 @@
         "telephone": "+61400755781",
         "email": "admin@johnstonecivil.com.au",
         "image": "https://johnstone-fencing.vercel.app/images/fenching-hero-1920x600.jpg",
+        "sameAs": ["https://hipages.com.au/connect/johnstonecivilptyltd"],
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Sydney",
@@ -127,7 +142,7 @@
 
     <header class="site-header">
       <div class="container header-inner">
-        <a class="logo" href="index.html" aria-label="Johnstone Fencing — home">
+        <a class="logo" href="/" aria-label="Johnstone Fencing — home">
           <svg
             class="logo__svg"
             width="900"
@@ -183,10 +198,10 @@
         </button>
         <nav class="nav" id="site-nav" aria-label="Primary">
           <ul class="nav-list">
-            <li><a href="index.html" aria-current="page">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/" aria-current="page">Home</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </nav>
         <a class="btn btn-primary btn-sm header-cta" href="tel:+61400755781">Call Now</a>
@@ -196,14 +211,24 @@
     <main id="main">
       <section class="hero" aria-labelledby="hero-heading">
         <div class="hero-bg" aria-hidden="true">
-          <img
-            src="images/fenching-hero-1920x600.jpg"
-            alt=""
-            width="1920"
-            height="600"
-            fetchpriority="high"
-            decoding="async"
-          />
+          <picture>
+            <source
+              type="image/webp"
+              srcset="
+                images/fenching-hero-1280x400.webp 1280w,
+                images/fenching-hero-1920x600.webp 1920w
+              "
+              sizes="100vw"
+            />
+            <img
+              src="images/fenching-hero-1920x600.jpg"
+              alt=""
+              width="1920"
+              height="600"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </picture>
         </div>
         <div class="hero-overlay" aria-hidden="true"></div>
         <div class="container">
@@ -213,7 +238,7 @@
             <p class="lead">Three focused fencing systems across Sydney for homes, businesses, industrial yards, and public spaces</p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="tel:+61400755781">Call Now</a>
-              <a class="btn btn-outline" href="contact.html">Get a Free Quote</a>
+              <a class="btn btn-outline" href="/contact">Get a Free Quote</a>
             </div>
           </div>
         </div>
@@ -227,7 +252,7 @@
             <p>
               <strong>Johnstone Fencing</strong> installs <strong>chainlink</strong>, <strong>diplomat</strong>, and
               <strong>security fencing</strong> only. Each system is selected to match your site conditions, access needs,
-              and required level of protection. See our <a href="services.html">services</a> for fencing types and
+              and required level of protection. See our <a href="/services">services</a> for fencing types and
               applications.
             </p>
           </div>
@@ -248,18 +273,22 @@
                   Open-visibility fencing for boundaries, sporting enclosures, schools, and light commercial sites with
                   durable galvanised mesh.
                 </p>
-                <a class="btn btn-primary btn-sm" href="services.html#chainlink">Learn more</a>
+                <a class="btn btn-primary btn-sm" href="/services#chainlink">Learn more</a>
               </div>
             </article>
             <article class="card">
               <div class="card-media">
-                <img
-                  src="images/diplomat-fencing.png"
-                  alt="Diplomat style tubular fencing and gate"
-                  width="800"
-                  height="423"
-                  loading="lazy"
-                />
+                <picture>
+                  <source type="image/webp" srcset="images/diplomat-fencing.webp" />
+                  <img
+                    src="images/diplomat-fencing.png"
+                    alt="Diplomat style tubular fencing and gate"
+                    width="800"
+                    height="423"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
               </div>
               <div class="card-body">
                 <h3>Diplomat fencing</h3>
@@ -267,18 +296,22 @@
                   Strong tubular steel fencing for front boundaries, strata, schools, and commercial sites where a clean
                   finish and controlled access matter.
                 </p>
-                <a class="btn btn-primary btn-sm" href="services.html#diplomat">Learn more</a>
+                <a class="btn btn-primary btn-sm" href="/services#diplomat">Learn more</a>
               </div>
             </article>
             <article class="card">
               <div class="card-media">
-                <img
-                  src="images/security-fencing.png"
-                  alt="High-security steel perimeter fencing at a commercial site"
-                  width="800"
-                  height="423"
-                  loading="lazy"
-                />
+                <picture>
+                  <source type="image/webp" srcset="images/security-fencing.webp" />
+                  <img
+                    src="images/security-fencing.png"
+                    alt="High-security steel perimeter fencing at a commercial site"
+                    width="800"
+                    height="423"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
               </div>
               <div class="card-body">
                 <h3>Security fencing</h3>
@@ -286,7 +319,7 @@
                   Higher-security systems including anti-climb options, reinforced posts, and secure gates for critical
                   infrastructure and restricted areas.
                 </p>
-                <a class="btn btn-primary btn-sm" href="services.html#security">Learn more</a>
+                <a class="btn btn-primary btn-sm" href="/services#security">Learn more</a>
               </div>
             </article>
           </div>
@@ -350,21 +383,21 @@
             <h2 id="areas-heading">Greater Sydney, Central Coast, Newcastle &amp; Southern Highlands</h2>
             <p>
               We install <strong>chainlink</strong>, <strong>diplomat</strong>, and <strong>security fencing</strong>
-              across <strong>Greater Sydney</strong> (all
-              areas), the <strong>Central Coast</strong>, <strong>Newcastle</strong> and the Hunter, and the
-              <strong>Southern Highlands</strong> — for <strong>sports</strong>, <strong>rural</strong>,
+              across <a href="/greater-sydney">Greater Sydney</a>, the
+              <a href="/central-coast">Central Coast</a>, <a href="/newcastle">Newcastle and the Hunter</a>, and the
+              <a href="/southern-highlands">Southern Highlands</a> — for <strong>sports</strong>, <strong>rural</strong>,
               <strong>government</strong>, and residential projects. We still work daily in Western Sydney (e.g.
               Liverpool, Campbelltown, Parramatta) and travel throughout the region for the right job. Explore
-              <a href="services.html#chainlink">chainlink options</a>, <a href="services.html#diplomat">diplomat fencing</a>,
-              and <a href="services.html#security">security systems</a> before you
-              <a href="contact.html">request a quote</a>.
+              <a href="/services#chainlink">chainlink options</a>, <a href="/services#diplomat">diplomat fencing</a>,
+              and <a href="/services#security">security systems</a> before you
+              <a href="/contact">request a quote</a>.
             </p>
           </div>
           <div class="pills" role="list">
-            <span class="pill" role="listitem">Greater Sydney</span>
-            <span class="pill" role="listitem">Central Coast</span>
-            <span class="pill" role="listitem">Newcastle &amp; Hunter</span>
-            <span class="pill" role="listitem">Southern Highlands</span>
+            <a class="pill" role="listitem" href="/greater-sydney">Greater Sydney</a>
+            <a class="pill" role="listitem" href="/central-coast">Central Coast</a>
+            <a class="pill" role="listitem" href="/newcastle">Newcastle &amp; Hunter</a>
+            <a class="pill" role="listitem" href="/southern-highlands">Southern Highlands</a>
             <span class="pill" role="listitem">Western Sydney</span>
             <span class="pill" role="listitem">Regional NSW</span>
           </div>
@@ -382,7 +415,7 @@
             <p>
               Yes. We work on <strong>residential</strong>, <strong>commercial</strong>, <strong>sports</strong>,
               <strong>rural</strong>, and <strong>public-sector</strong> sites. See our full
-              <a href="services.html">fencing services</a>.
+              <a href="/services">fencing services</a>.
             </p>
             <h3>What suburbs and regions do you cover?</h3>
             <p>
@@ -392,14 +425,14 @@
             </p>
             <h3>What fencing types do you install?</h3>
             <p>
-              We install <a href="services.html#chainlink">chainlink</a>, <a href="services.html#diplomat">diplomat</a>,
-              and <a href="services.html#security">security fencing</a>. We can include matching gates and access
+              We install <a href="/services#chainlink">chainlink</a>, <a href="/services#diplomat">diplomat</a>,
+              and <a href="/services#security">security fencing</a>. We can include matching gates and access
               solutions within these systems.
             </p>
             <h3>How do I get a quote?</h3>
             <p>
               Call <a href="tel:+61400755781">0400 755 781</a> or use the
-              <a href="contact.html">quote form</a> with your suburb, site type, and approximate fence length.
+              <a href="/contact">quote form</a> with your suburb, site type, and approximate fence length.
             </p>
           </div>
         </div>
@@ -507,7 +540,7 @@
           <h2 id="cta-heading">Need chainlink, diplomat, or security fencing?</h2>
           <p>Get a free quote today with your site details, approximate metres, and preferred fencing type.</p>
           <div class="cta-actions">
-            <a class="btn btn-primary" href="contact.html">Get a Free Quote</a>
+            <a class="btn btn-primary" href="/contact">Get a Free Quote</a>
             <a class="btn btn-outline" href="tel:+61400755781">Call 0400 755 781</a>
           </div>
         </div>
@@ -517,7 +550,7 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          <a class="logo" href="index.html" aria-label="Johnstone Fencing — home">
+          <a class="logo" href="/" aria-label="Johnstone Fencing — home">
             <svg
               class="logo__svg"
               width="900"
@@ -564,9 +597,18 @@
         <div>
           <h3>Quick links</h3>
           <ul>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Service areas</h3>
+          <ul>
+            <li><a href="/greater-sydney">Greater Sydney</a></li>
+            <li><a href="/central-coast">Central Coast</a></li>
+            <li><a href="/newcastle">Newcastle &amp; Hunter</a></li>
+            <li><a href="/southern-highlands">Southern Highlands</a></li>
           </ul>
         </div>
         <div>
@@ -593,7 +635,7 @@
     </footer>
 
     <div class="mobile-call-bar" role="navigation" aria-label="Quick actions">
-      <a class="btn btn-outline" href="contact.html">Free Quote</a>
+      <a class="btn btn-outline" href="/contact">Free Quote</a>
       <a class="btn btn-primary" href="tel:+61400755781">Call Now</a>
     </div>
 

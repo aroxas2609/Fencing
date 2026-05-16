@@ -1,3 +1,4 @@
+<!-- SITE_URL: https://johnstone-fencing.vercel.app -->
 <!DOCTYPE html>
 <html lang="en-AU">
   <head>
@@ -6,10 +7,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
+      as="style"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
       rel="stylesheet"
     />
-    <title>Fencing Services Sydney | Chainlink, Diplomat &amp; Security Fencing</title>
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <title>Chainlink, Diplomat &amp; Security Fencing Services | Johnstone Fencing Sydney</title>
     <meta
       name="description"
       content="Sydney fencing services: Chainlink, Diplomat &amp; Security fencing for residential, commercial, industrial, and public sites across NSW."
@@ -18,9 +25,9 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="application-name" content="Johnstone Fencing" />
     <meta name="apple-mobile-web-app-title" content="Johnstone Fencing" />
-    <link rel="canonical" href="https://johnstone-fencing.vercel.app/services.html" />
+    <link rel="canonical" href="https://johnstone-fencing.vercel.app/services" />
     <meta property="og:site_name" content="Johnstone Fencing" />
-    <meta property="og:url" content="https://johnstone-fencing.vercel.app/services.html" />
+    <meta property="og:url" content="https://johnstone-fencing.vercel.app/services" />
     <meta property="og:title" content="Chainlink, Diplomat &amp; Security Fencing | Johnstone Fencing" />
     <meta
       property="og:description"
@@ -29,6 +36,12 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_AU" />
     <meta property="og:image" content="https://johnstone-fencing.vercel.app/images/fenching-hero-1920x600.jpg" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="600" />
+    <meta
+      property="og:image:alt"
+      content="Commercial chainwire fencing installed by Johnstone Fencing in Sydney"
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Chainlink, Diplomat &amp; Security Fencing | Johnstone Fencing" />
     <meta
@@ -37,13 +50,70 @@
     />
     <meta name="twitter:image" content="https://johnstone-fencing.vercel.app/images/fenching-hero-1920x600.jpg" />
     <meta name="theme-color" content="#0f1419" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://johnstone-fencing.vercel.app/" },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://johnstone-fencing.vercel.app/services"
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Fencing services",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "Service",
+              "name": "Chainlink (chainwire) fencing",
+              "description": "Galvanised and PVC-coated chainlink fencing for sports, rural, commercial and public sites.",
+              "provider": { "@id": "https://johnstone-fencing.vercel.app/#business" },
+              "areaServed": "Greater Sydney"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "Service",
+              "name": "Diplomat fencing",
+              "description": "Tubular diplomat fencing for schools, strata and commercial frontages.",
+              "provider": { "@id": "https://johnstone-fencing.vercel.app/#business" },
+              "areaServed": "NSW"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "Service",
+              "name": "Security fencing",
+              "description": "Anti-climb and high-security perimeter fencing for industrial and institutional sites.",
+              "provider": { "@id": "https://johnstone-fencing.vercel.app/#business" },
+              "areaServed": "NSW"
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
       <div class="container header-inner">
-        <a class="logo" href="index.html" aria-label="Johnstone Fencing — home">
+        <a class="logo" href="/" aria-label="Johnstone Fencing — home">
           <svg
             class="logo__svg"
             width="900"
@@ -99,10 +169,10 @@
         </button>
         <nav class="nav" id="site-nav" aria-label="Primary">
           <ul class="nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html" aria-current="page">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/services" aria-current="page">Services</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </nav>
         <a class="btn btn-primary btn-sm header-cta" href="tel:+61400755781">Call Now</a>
@@ -117,7 +187,7 @@
             We offer three specialist services only: <strong>chainlink fencing</strong>, <strong>diplomat fencing</strong>,
             and <strong>security fencing</strong> across <strong>Greater Sydney</strong>, the
             <strong>Central Coast</strong>, <strong>Newcastle</strong>, the <strong>Southern Highlands</strong>, and
-            regional NSW. Browse service types and applications below, then <a href="contact.html">request a free quote</a>.
+            regional NSW. Browse service types and applications below, then <a href="/contact">request a free quote</a>.
           </p>
         </div>
       </header>
@@ -152,19 +222,23 @@
                 beyond — with gates sized for vehicles and stock.</p>
               <p><strong>Government &amp; institutions.</strong> Schools, depots, utilities, and public open space — we
                 follow agreed specs, site inductions, and documentation so your project stays audit-friendly.</p>
-              <a class="btn btn-primary" href="contact.html">Get a quote — Chainlink</a>
+              <a class="btn btn-primary" href="/contact">Get a quote — Chainlink</a>
             </div>
           </article>
 
           <article class="service-block reverse" id="diplomat">
             <div class="service-block-media">
-              <img
-                src="images/diplomat-fencing.png"
-                alt="Diplomat style tubular fencing with secure gate access"
-                width="800"
-                height="423"
-                loading="lazy"
-              />
+              <picture>
+                <source type="image/webp" srcset="images/diplomat-fencing.webp" />
+                <img
+                  src="images/diplomat-fencing.png"
+                  alt="Diplomat style tubular fencing with secure gate access"
+                  width="800"
+                  height="423"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             </div>
             <div>
               <h2>Diplomat fencing</h2>
@@ -180,19 +254,23 @@
                 <strong>Typical applications:</strong> schools, strata complexes, front boundaries, commercial sites,
                 and public-facing facilities that require secure but welcoming perimeter control.
               </p>
-              <a class="btn btn-primary" href="contact.html">Get a quote — Diplomat</a>
+              <a class="btn btn-primary" href="/contact">Get a quote — Diplomat</a>
             </div>
           </article>
 
           <article class="service-block" id="security">
             <div class="service-block-media">
-              <img
-                src="images/security-fencing.png"
-                alt="Security steel perimeter fencing for a commercial site"
-                width="800"
-                height="423"
-                loading="lazy"
-              />
+              <picture>
+                <source type="image/webp" srcset="images/security-fencing.webp" />
+                <img
+                  src="images/security-fencing.png"
+                  alt="Security steel perimeter fencing for a commercial site"
+                  width="800"
+                  height="423"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             </div>
             <div>
               <h2>Security fencing</h2>
@@ -208,7 +286,7 @@
                 <strong>Typical applications:</strong> warehouses, depots, utility compounds, transport yards, schools,
                 and government infrastructure requiring stronger perimeter performance.
               </p>
-              <a class="btn btn-primary" href="contact.html">Get a quote — Security</a>
+              <a class="btn btn-primary" href="/contact">Get a quote — Security</a>
             </div>
           </article>
         </div>
@@ -220,9 +298,11 @@
             <p class="section-kicker">Popular service areas</p>
             <h2 id="svc-areas-heading">Suburbs and regions we quote every week</h2>
             <p>
-              Frequent enquiries come from Parramatta, Blacktown, Penrith, Liverpool, Campbelltown, Castle Hill,
-              Hornsby, Gosford, and Newcastle. If your suburb is nearby, we can usually help. See
-              <a href="index.html#areas">full service areas</a> or <a href="contact.html">send your suburb for a quote</a>.
+              We quote weekly across <a href="/greater-sydney">Greater Sydney</a>, the
+              <a href="/central-coast">Central Coast</a>, <a href="/newcastle">Newcastle &amp; Hunter</a>, and the
+              <a href="/southern-highlands">Southern Highlands</a>. See
+              <a href="/#areas">all service areas on the home page</a> or
+              <a href="/contact">send your suburb for a quote</a>.
             </p>
           </div>
         </div>
@@ -236,7 +316,7 @@
             or security fencing option for your project.
           </p>
           <div class="cta-actions">
-            <a class="btn btn-primary" href="contact.html">Get a Free Quote</a>
+            <a class="btn btn-primary" href="/contact">Get a Free Quote</a>
             <a class="btn btn-outline" href="tel:+61400755781">Call 0400 755 781</a>
           </div>
         </div>
@@ -246,7 +326,7 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          <a class="logo" href="index.html" aria-label="Johnstone Fencing — home">
+          <a class="logo" href="/" aria-label="Johnstone Fencing — home">
             <svg
               class="logo__svg"
               width="900"
@@ -293,9 +373,18 @@
         <div>
           <h3>Quick links</h3>
           <ul>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/services" aria-current="page">Services</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Service areas</h3>
+          <ul>
+            <li><a href="/greater-sydney">Greater Sydney</a></li>
+            <li><a href="/central-coast">Central Coast</a></li>
+            <li><a href="/newcastle">Newcastle &amp; Hunter</a></li>
+            <li><a href="/southern-highlands">Southern Highlands</a></li>
           </ul>
         </div>
         <div>
@@ -322,7 +411,7 @@
     </footer>
 
     <div class="mobile-call-bar" role="navigation" aria-label="Quick actions">
-      <a class="btn btn-outline" href="contact.html">Free Quote</a>
+      <a class="btn btn-outline" href="/contact">Free Quote</a>
       <a class="btn btn-primary" href="tel:+61400755781">Call Now</a>
     </div>
 

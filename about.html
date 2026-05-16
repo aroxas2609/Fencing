@@ -1,3 +1,4 @@
+<!-- SITE_URL: https://johnstone-fencing.vercel.app -->
 <!DOCTYPE html>
 <html lang="en-AU">
   <head>
@@ -6,9 +7,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
+      as="style"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     <title>About Johnstone Fencing | Chainlink, Diplomat &amp; Security</title>
     <meta
       name="description"
@@ -18,9 +25,9 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="application-name" content="Johnstone Fencing" />
     <meta name="apple-mobile-web-app-title" content="Johnstone Fencing" />
-    <link rel="canonical" href="https://johnstone-fencing.vercel.app/about.html" />
+    <link rel="canonical" href="https://johnstone-fencing.vercel.app/about" />
     <meta property="og:site_name" content="Johnstone Fencing" />
-    <meta property="og:url" content="https://johnstone-fencing.vercel.app/about.html" />
+    <meta property="og:url" content="https://johnstone-fencing.vercel.app/about" />
     <meta property="og:title" content="About Johnstone Fencing | Chainlink, Diplomat &amp; Security" />
     <meta
       property="og:description"
@@ -29,6 +36,12 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_AU" />
     <meta property="og:image" content="https://johnstone-fencing.vercel.app/images/fenching-hero-1920x600.jpg" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="600" />
+    <meta
+      property="og:image:alt"
+      content="Commercial chainwire fencing installed by Johnstone Fencing in Sydney"
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="About Johnstone Fencing | Chainlink, Diplomat &amp; Security" />
     <meta
@@ -37,13 +50,37 @@
     />
     <meta name="twitter:image" content="https://johnstone-fencing.vercel.app/images/fenching-hero-1920x600.jpg" />
     <meta name="theme-color" content="#0f1419" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://johnstone-fencing.vercel.app/" },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About",
+            "item": "https://johnstone-fencing.vercel.app/about"
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About Johnstone Fencing",
+        "url": "https://johnstone-fencing.vercel.app/about",
+        "mainEntity": { "@id": "https://johnstone-fencing.vercel.app/#business" }
+      }
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
       <div class="container header-inner">
-        <a class="logo" href="index.html" aria-label="Johnstone Fencing — home">
+        <a class="logo" href="/" aria-label="Johnstone Fencing — home">
           <svg
             class="logo__svg"
             width="900"
@@ -99,10 +136,10 @@
         </button>
         <nav class="nav" id="site-nav" aria-label="Primary">
           <ul class="nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html" aria-current="page">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/about" aria-current="page">About</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </nav>
         <a class="btn btn-primary btn-sm header-cta" href="tel:+61400755781">Call Now</a>
@@ -117,7 +154,7 @@
             Straight answers, solid fences, and service that respects your time — with specialist delivery of
             <strong>chainlink</strong>, <strong>diplomat</strong>, and <strong>security fencing</strong> in Sydney for
             residential, commercial, sport, rural, and public-sector sites. Explore our
-            <a href="services.html">services</a> or <a href="contact.html">request a quote</a>.
+            <a href="/services">services</a> or <a href="/contact">request a quote</a>.
           </p>
         </div>
       </header>
@@ -205,7 +242,7 @@
             Sydney, the Central Coast, Newcastle, or the Southern Highlands. We will help you choose the right system.
           </p>
           <div class="cta-actions">
-            <a class="btn btn-primary" href="contact.html">Get a Free Quote</a>
+            <a class="btn btn-primary" href="/contact">Get a Free Quote</a>
             <a class="btn btn-outline" href="tel:+61400755781">Call 0400 755 781</a>
           </div>
         </div>
@@ -215,7 +252,7 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          <a class="logo" href="index.html" aria-label="Johnstone Fencing — home">
+          <a class="logo" href="/" aria-label="Johnstone Fencing — home">
             <svg
               class="logo__svg"
               width="900"
@@ -262,9 +299,18 @@
         <div>
           <h3>Quick links</h3>
           <ul>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/about" aria-current="page">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Service areas</h3>
+          <ul>
+            <li><a href="/greater-sydney">Greater Sydney</a></li>
+            <li><a href="/central-coast">Central Coast</a></li>
+            <li><a href="/newcastle">Newcastle &amp; Hunter</a></li>
+            <li><a href="/southern-highlands">Southern Highlands</a></li>
           </ul>
         </div>
         <div>
@@ -291,7 +337,7 @@
     </footer>
 
     <div class="mobile-call-bar" role="navigation" aria-label="Quick actions">
-      <a class="btn btn-outline" href="contact.html">Free Quote</a>
+      <a class="btn btn-outline" href="/contact">Free Quote</a>
       <a class="btn btn-primary" href="tel:+61400755781">Call Now</a>
     </div>
 

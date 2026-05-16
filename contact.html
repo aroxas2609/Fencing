@@ -1,3 +1,4 @@
+<!-- SITE_URL: https://johnstone-fencing.vercel.app -->
 <!DOCTYPE html>
 <html lang="en-AU">
   <head>
@@ -6,9 +7,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
+      as="style"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     <title>Contact Johnstone Fencing | Chainlink, Diplomat &amp; Security Quotes</title>
     <meta
       name="description"
@@ -18,9 +25,9 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="application-name" content="Johnstone Fencing" />
     <meta name="apple-mobile-web-app-title" content="Johnstone Fencing" />
-    <link rel="canonical" href="https://johnstone-fencing.vercel.app/contact.html" />
+    <link rel="canonical" href="https://johnstone-fencing.vercel.app/contact" />
     <meta property="og:site_name" content="Johnstone Fencing" />
-    <meta property="og:url" content="https://johnstone-fencing.vercel.app/contact.html" />
+    <meta property="og:url" content="https://johnstone-fencing.vercel.app/contact" />
     <meta property="og:title" content="Contact Johnstone Fencing | Chainlink, Diplomat &amp; Security Quotes" />
     <meta
       property="og:description"
@@ -29,6 +36,12 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_AU" />
     <meta property="og:image" content="https://johnstone-fencing.vercel.app/images/fenching-hero-1920x600.jpg" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="600" />
+    <meta
+      property="og:image:alt"
+      content="Commercial chainwire fencing installed by Johnstone Fencing in Sydney"
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Contact Johnstone Fencing | Chainlink, Diplomat &amp; Security Quotes" />
     <meta
@@ -37,13 +50,41 @@
     />
     <meta name="twitter:image" content="https://johnstone-fencing.vercel.app/images/fenching-hero-1920x600.jpg" />
     <meta name="theme-color" content="#0f1419" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://johnstone-fencing.vercel.app/" },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Contact",
+            "item": "https://johnstone-fencing.vercel.app/contact"
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Johnstone Fencing",
+        "url": "https://johnstone-fencing.vercel.app/contact",
+        "mainEntity": {
+          "@id": "https://johnstone-fencing.vercel.app/#business",
+          "telephone": "+61400755781",
+          "email": "admin@johnstonecivil.com.au"
+        }
+      }
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
       <div class="container header-inner">
-        <a class="logo" href="index.html" aria-label="Johnstone Fencing — home">
+        <a class="logo" href="/" aria-label="Johnstone Fencing — home">
           <svg
             class="logo__svg"
             width="900"
@@ -99,10 +140,10 @@
         </button>
         <nav class="nav" id="site-nav" aria-label="Primary">
           <ul class="nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html" aria-current="page">Contact</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact" aria-current="page">Contact</a></li>
           </ul>
         </nav>
         <a class="btn btn-primary btn-sm header-cta" href="tel:+61400755781">Call Now</a>
@@ -141,7 +182,7 @@
               <strong>Newcastle</strong> and the Hunter, and the <strong>Southern Highlands</strong>, plus travel
               regionally for the right project. Common suburbs include Parramatta, Blacktown, Penrith, Liverpool, and
               Campbelltown. Mention your suburb or town and site type in your message, or review our
-              <a href="services.html">service list</a> first.
+              <a href="/services">service list</a> first.
             </p>
             <a class="btn btn-primary btn-block" href="tel:+61400755781" style="margin-top: 1rem">Tap to call on mobile</a>
           </div>
@@ -155,7 +196,7 @@
               <input type="hidden" name="_subject" value="New quote request — Johnstone Fencing website" />
               <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
               <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_next" id="form-next" value="https://johnstone-fencing.vercel.app/contact.html?sent=1" />
+              <input type="hidden" name="_next" id="form-next" value="https://johnstone-fencing.vercel.app/contact?sent=1" />
 
               <div class="form-group">
                 <label for="name">Name</label>
@@ -219,7 +260,7 @@
           </p>
           <div class="cta-actions">
             <a class="btn btn-primary" href="tel:+61400755781">Call 0400 755 781</a>
-            <a class="btn btn-outline" href="services.html">View services</a>
+            <a class="btn btn-outline" href="/services">View services</a>
           </div>
         </div>
       </section>
@@ -228,7 +269,7 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          <a class="logo" href="index.html" aria-label="Johnstone Fencing — home">
+          <a class="logo" href="/" aria-label="Johnstone Fencing — home">
             <svg
               class="logo__svg"
               width="900"
@@ -275,9 +316,18 @@
         <div>
           <h3>Quick links</h3>
           <ul>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact" aria-current="page">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Service areas</h3>
+          <ul>
+            <li><a href="/greater-sydney">Greater Sydney</a></li>
+            <li><a href="/central-coast">Central Coast</a></li>
+            <li><a href="/newcastle">Newcastle &amp; Hunter</a></li>
+            <li><a href="/southern-highlands">Southern Highlands</a></li>
           </ul>
         </div>
         <div>
@@ -315,7 +365,7 @@
         var next = document.getElementById("form-next");
         if (next && location.protocol !== "file:") {
           try {
-            next.value = new URL("contact.html?sent=1", location.href).href;
+            next.value = new URL("/contact?sent=1", location.origin).href;
           } catch (e) {}
         }
       })();

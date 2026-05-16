@@ -945,8 +945,20 @@ button:focus-visible {
 
 @media (min-width: 768px) {
   .footer-grid {
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
   }
+}
+
+a.pill {
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+a.pill:hover,
+a.pill:focus-visible {
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
 }
 
 .site-footer h3 {
